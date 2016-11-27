@@ -4,10 +4,25 @@ import UIKit
 struct TouchMetadata {
     var circle: Circle
     var startLocation: CGPoint
+    var startTime: Date
+    var duration: Int?
+    
+    init(circle: Circle, startLocation: CGPoint) {
+        self.circle = circle
+        self.startLocation = startLocation
+        self.startTime = Date()
+    }
+    
+    init(metadata: TouchMetadata, duration: Int) {
+        self.circle = metadata.circle
+        self.startLocation = metadata.startLocation
+        self.startTime = metadata.startTime
+        self.duration = duration
+    }
 }
 
 protocol TouchViewDelegate {
-    func registeredTouch(at location: CGPoint, for duration: TimeInterval)
+    func registeredTouch(with metadata: TouchMetadata)
 }
 
 class TouchView: UIView {
@@ -76,9 +91,10 @@ class TouchView: UIView {
     }
     
     func stopTracking(touch: UITouch) {
-        guard let circle = touchData[touch]?.circle else { return }
+        guard let data = touchData[touch] else { return }
         
-        circle.scale(to: 1, fades: true) { circle.removeFromSuperview() }
+        delegate?.registeredTouch(with: data)
+        data.circle.scale(to: 1, fades: true) { data.circle.removeFromSuperview() }
         touchData.removeValue(forKey: touch)
     }
     

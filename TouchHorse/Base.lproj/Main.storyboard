@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="621" width="375" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
-                                <state key="normal" title="BEGIN!">
+                                <state key="normal" title="BEGIN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -66,6 +66,7 @@
                     <connections>
                         <outlet property="beginButton" destination="7dZ-zl-Cty" id="HXa-5b-hQR"/>
                         <outlet property="logTextView" destination="IJQ-K1-HKb" id="z1x-3F-Eh0"/>
+                        <outlet property="touchView" destination="fWL-8E-mas" id="18W-Pe-CGo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
