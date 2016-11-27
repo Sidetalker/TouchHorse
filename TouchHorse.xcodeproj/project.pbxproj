@@ -29,6 +29,16 @@
 		0A1440451DEB8D3000461DBD /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14400D1DEB8C2700461DBD /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A1440461DEB8D6100461DBD /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14400A1DEB8C1A00461DBD /* Telekinesis.framework */; };
 		0A1440471DEB8D6100461DBD /* Telekinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14400A1DEB8C1A00461DBD /* Telekinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A1440491DEB902700461DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A1440481DEB902700461DBD /* GoogleService-Info.plist */; };
+		0A14404A1DEB902700461DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A1440481DEB902700461DBD /* GoogleService-Info.plist */; };
+		0A14404D1DEB915200461DBD /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14404B1DEB915200461DBD /* FirebaseAuth.framework */; };
+		0A14404E1DEB915200461DBD /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14404B1DEB915200461DBD /* FirebaseAuth.framework */; };
+		0A14404F1DEB915200461DBD /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14404C1DEB915200461DBD /* GTMSessionFetcher.framework */; };
+		0A1440501DEB915200461DBD /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14404C1DEB915200461DBD /* GTMSessionFetcher.framework */; };
+		0A1440531DEB9AD600461DBD /* TouchSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1440521DEB9AD600461DBD /* TouchSet.swift */; };
+		0A1440541DEB9AD600461DBD /* TouchSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1440521DEB9AD600461DBD /* TouchSet.swift */; };
+		0A1440561DEB9E7F00461DBD /* FirebaseHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1440551DEB9E7F00461DBD /* FirebaseHelpers.swift */; };
+		0A1440571DEB9E7F00461DBD /* FirebaseHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1440551DEB9E7F00461DBD /* FirebaseHelpers.swift */; };
 		0AB642A01DEB40F70073E2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */; };
 		0AB642A21DEB40F70073E2D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642A11DEB40F70073E2D7 /* MainViewController.swift */; };
 		0AB642A51DEB40F70073E2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A31DEB40F70073E2D7 /* Main.storyboard */; };
@@ -95,6 +105,11 @@
 		0A14402B1DEB8C7400461DBD /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/Firebase/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		0A14402C1DEB8C7400461DBD /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Frameworks/Firebase/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		0A14402D1DEB8C7400461DBD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Frameworks/Firebase/module.modulemap; sourceTree = "<group>"; };
+		0A1440481DEB902700461DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Frameworks/Firebase/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A14404B1DEB915200461DBD /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/Firebase/FirebaseAuth.framework; sourceTree = "<group>"; };
+		0A14404C1DEB915200461DBD /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Frameworks/Firebase/GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		0A1440521DEB9AD600461DBD /* TouchSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchSet.swift; sourceTree = "<group>"; };
+		0A1440551DEB9E7F00461DBD /* FirebaseHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelpers.swift; sourceTree = "<group>"; };
 		0AB6429C1DEB40F70073E2D7 /* TouchHorse Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TouchHorse Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AB642A11DEB40F70073E2D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -125,8 +140,10 @@
 				0A1440321DEB8C7400461DBD /* FirebaseDatabase.framework in Frameworks */,
 				0A1440361DEB8C7400461DBD /* GoogleInterchangeUtilities.framework in Frameworks */,
 				0A1440461DEB8D6100461DBD /* Telekinesis.framework in Frameworks */,
+				0A14404F1DEB915200461DBD /* GTMSessionFetcher.framework in Frameworks */,
 				0A14402E1DEB8C7400461DBD /* FirebaseAnalytics.framework in Frameworks */,
 				0A1440301DEB8C7400461DBD /* FirebaseCore.framework in Frameworks */,
+				0A14404D1DEB915200461DBD /* FirebaseAuth.framework in Frameworks */,
 				0A1440441DEB8D3000461DBD /* PromiseKit.framework in Frameworks */,
 				0A1440341DEB8C7400461DBD /* FirebaseInstanceID.framework in Frameworks */,
 				0A1440141DEB8C3400461DBD /* SwiftyBeaver.framework in Frameworks */,
@@ -153,12 +170,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A1440391DEB8C7400461DBD /* GoogleSymbolUtilities.framework in Frameworks */,
+				0A1440501DEB915200461DBD /* GTMSessionFetcher.framework in Frameworks */,
 				0A14403E1DEB8CC400461DBD /* SwiftyBeaver.framework in Frameworks */,
 				0A1440331DEB8C7400461DBD /* FirebaseDatabase.framework in Frameworks */,
 				0A1440371DEB8C7400461DBD /* GoogleInterchangeUtilities.framework in Frameworks */,
 				0A14402F1DEB8C7400461DBD /* FirebaseAnalytics.framework in Frameworks */,
 				0A1440311DEB8C7400461DBD /* FirebaseCore.framework in Frameworks */,
 				0A1440351DEB8C7400461DBD /* FirebaseInstanceID.framework in Frameworks */,
+				0A14404E1DEB915200461DBD /* FirebaseAuth.framework in Frameworks */,
 				0A14403C1DEB8CC400461DBD /* PromiseKit.framework in Frameworks */,
 				0A14403B1DEB8C7400461DBD /* GoogleToolboxForMac.framework in Frameworks */,
 			);
@@ -170,7 +189,10 @@
 		0A1440241DEB8C6B00461DBD /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				0A1440481DEB902700461DBD /* GoogleService-Info.plist */,
 				0A1440251DEB8C7400461DBD /* Firebase.h */,
+				0A14404B1DEB915200461DBD /* FirebaseAuth.framework */,
+				0A14404C1DEB915200461DBD /* GTMSessionFetcher.framework */,
 				0A1440261DEB8C7400461DBD /* FirebaseAnalytics.framework */,
 				0A1440271DEB8C7400461DBD /* FirebaseCore.framework */,
 				0A1440281DEB8C7400461DBD /* FirebaseDatabase.framework */,
@@ -181,6 +203,14 @@
 				0A14402D1DEB8C7400461DBD /* module.modulemap */,
 			);
 			name = Firebase;
+			sourceTree = "<group>";
+		};
+		0A1440511DEB9A9D00461DBD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A1440521DEB9AD600461DBD /* TouchSet.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		0AB642931DEB40F70073E2D7 = {
@@ -248,10 +278,12 @@
 		0AB642CF1DEB42970073E2D7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0A1440511DEB9A9D00461DBD /* Models */,
 				0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */,
 				0AB642A11DEB40F70073E2D7 /* MainViewController.swift */,
 				0AB642D11DEB44FA0073E2D7 /* TouchView.swift */,
 				0AB642D51DEB479D0073E2D7 /* UIHelpers.swift */,
+				0A1440551DEB9E7F00461DBD /* FirebaseHelpers.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -413,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB642AA1DEB40F70073E2D7 /* LaunchScreen.storyboard in Resources */,
+				0A1440491DEB902700461DBD /* GoogleService-Info.plist in Resources */,
 				0AB642A71DEB40F70073E2D7 /* Assets.xcassets in Resources */,
 				0AB642A51DEB40F70073E2D7 /* Main.storyboard in Resources */,
 			);
@@ -437,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB642E91DEB6F5D0073E2D7 /* LaunchScreen.storyboard in Resources */,
+				0A14404A1DEB902700461DBD /* GoogleService-Info.plist in Resources */,
 				0AB642EA1DEB6F5D0073E2D7 /* Assets.xcassets in Resources */,
 				0AB642EB1DEB6F5D0073E2D7 /* Main.storyboard in Resources */,
 			);
@@ -480,8 +514,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1440531DEB9AD600461DBD /* TouchSet.swift in Sources */,
 				0AB642A21DEB40F70073E2D7 /* MainViewController.swift in Sources */,
 				0AB642D61DEB479D0073E2D7 /* UIHelpers.swift in Sources */,
+				0A1440561DEB9E7F00461DBD /* FirebaseHelpers.swift in Sources */,
 				0AB642D21DEB44FA0073E2D7 /* TouchView.swift in Sources */,
 				0AB642D41DEB47110073E2D7 /* ProStylin.swift in Sources */,
 				0AB642A01DEB40F70073E2D7 /* AppDelegate.swift in Sources */,
@@ -508,8 +544,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1440541DEB9AD600461DBD /* TouchSet.swift in Sources */,
 				0AB642E11DEB6F5D0073E2D7 /* MainViewController.swift in Sources */,
 				0AB642E21DEB6F5D0073E2D7 /* UIHelpers.swift in Sources */,
+				0A1440571DEB9E7F00461DBD /* FirebaseHelpers.swift in Sources */,
 				0AB642E31DEB6F5D0073E2D7 /* TouchView.swift in Sources */,
 				0AB642E41DEB6F5D0073E2D7 /* ProStylin.swift in Sources */,
 				0AB642E51DEB6F5D0073E2D7 /* AppDelegate.swift in Sources */,

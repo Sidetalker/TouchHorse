@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyBeaver
+import Firebase
 
 let log = SwiftyBeaver.self
 
@@ -18,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         configureLogging()
+        
+        FIRApp.configure()
+        FIRAuth.auth()?.signInAnonymously { user, error in
+            if let error = error {
+                log.error("Error signing in anonymously: \(error.localizedDescription)")
+            } else if let id = user?.uid {
+                log.debug("Logged in anonymous user: \(id)")
+            } else {
+                log.error("No user id, but no error either? Unstable af.")
+            }
+        }
         
         return true
     }

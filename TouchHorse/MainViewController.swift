@@ -42,6 +42,15 @@ class MainViewController: UIViewController, TouchViewDelegate {
             logTextView.text = "Logged \(touches.count) touches\n\n\(currentText)"
             button.setTitle("BEGIN", for: .normal)
             button.backgroundColor = .green
+            
+            TouchSet.create(with: touches, named: "Ballah Set", started: startTime)
+            .then { touchSet -> Void in
+                log.debug("TouchSet created!")
+                self.logToScreen(text: "Log saved to Firebase")
+            }.catch { error in
+                log.error("Error creating TouchSet: \(error.localizedDescription)")
+                self.logToScreen(text: "Error saving to Firebase: \(error.localizedDescription)")
+            }
         }
     }
     
@@ -50,10 +59,14 @@ class MainViewController: UIViewController, TouchViewDelegate {
         let duration = Int(Date().timeIntervalSince(metadata.startTime) * 1000)
         let location = metadata.startLocation
         
-        let currentText = logTextView.text ?? ""
-        logTextView.text = "start: \(startTime)\nduration: \(duration)ms\nlocation: \(location)\n\n\(currentText)"
+        logToScreen(text: "start: \(startTime)\nduration: \(duration)ms\nlocation: \(location)\n")
         
         touches.append(TouchMetadata(metadata: metadata, duration: duration))
+    }
+    
+    func logToScreen(text: String) {
+        let currentText = logTextView.text ?? ""
+        logTextView.text = "\(text)\n\(currentText)"
     }
 }
 
