@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0AB642A01DEB40F70073E2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */; };
-		0AB642A21DEB40F70073E2D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642A11DEB40F70073E2D7 /* ViewController.swift */; };
+		0AB642A21DEB40F70073E2D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642A11DEB40F70073E2D7 /* MainViewController.swift */; };
 		0AB642A51DEB40F70073E2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A31DEB40F70073E2D7 /* Main.storyboard */; };
 		0AB642A71DEB40F70073E2D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A61DEB40F70073E2D7 /* Assets.xcassets */; };
 		0AB642AA1DEB40F70073E2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A81DEB40F70073E2D7 /* LaunchScreen.storyboard */; };
 		0AB642B51DEB40F70073E2D7 /* TouchHorseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642B41DEB40F70073E2D7 /* TouchHorseTests.swift */; };
 		0AB642C01DEB40F70073E2D7 /* TouchHorseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642BF1DEB40F70073E2D7 /* TouchHorseUITests.swift */; };
+		0AB642D21DEB44FA0073E2D7 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D11DEB44FA0073E2D7 /* TouchView.swift */; };
+		0AB642D41DEB47110073E2D7 /* ProStylin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D31DEB47110073E2D7 /* ProStylin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0AB6429C1DEB40F70073E2D7 /* TouchHorse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchHorse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AB642A11DEB40F70073E2D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AB642A11DEB40F70073E2D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0AB642A41DEB40F70073E2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AB642A61DEB40F70073E2D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AB642A91DEB40F70073E2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		0AB642BB1DEB40F70073E2D7 /* TouchHorseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchHorseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB642BF1DEB40F70073E2D7 /* TouchHorseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchHorseUITests.swift; sourceTree = "<group>"; };
 		0AB642C11DEB40F70073E2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AB642D11DEB44FA0073E2D7 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
+		0AB642D31DEB47110073E2D7 /* ProStylin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProStylin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,10 @@
 		0AB6429E1DEB40F70073E2D7 /* TouchHorse */ = {
 			isa = PBXGroup;
 			children = (
-				0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */,
-				0AB642A11DEB40F70073E2D7 /* ViewController.swift */,
-				0AB642A31DEB40F70073E2D7 /* Main.storyboard */,
-				0AB642A61DEB40F70073E2D7 /* Assets.xcassets */,
-				0AB642A81DEB40F70073E2D7 /* LaunchScreen.storyboard */,
 				0AB642AB1DEB40F70073E2D7 /* Info.plist */,
+				0AB642D01DEB429D0073E2D7 /* Assets */,
+				0AB642CE1DEB428F0073E2D7 /* UI */,
+				0AB642CF1DEB42970073E2D7 /* Source */,
 			);
 			path = TouchHorse;
 			sourceTree = "<group>";
@@ -123,6 +125,34 @@
 				0AB642C11DEB40F70073E2D7 /* Info.plist */,
 			);
 			path = TouchHorseUITests;
+			sourceTree = "<group>";
+		};
+		0AB642CE1DEB428F0073E2D7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0AB642A31DEB40F70073E2D7 /* Main.storyboard */,
+				0AB642A81DEB40F70073E2D7 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		0AB642CF1DEB42970073E2D7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */,
+				0AB642A11DEB40F70073E2D7 /* MainViewController.swift */,
+				0AB642D11DEB44FA0073E2D7 /* TouchView.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		0AB642D01DEB429D0073E2D7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0AB642D31DEB47110073E2D7 /* ProStylin.swift */,
+				0AB642A61DEB40F70073E2D7 /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB642A21DEB40F70073E2D7 /* ViewController.swift in Sources */,
+				0AB642A21DEB40F70073E2D7 /* MainViewController.swift in Sources */,
+				0AB642D21DEB44FA0073E2D7 /* TouchView.swift in Sources */,
+				0AB642D41DEB47110073E2D7 /* ProStylin.swift in Sources */,
 				0AB642A01DEB40F70073E2D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
