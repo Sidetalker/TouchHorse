@@ -14,9 +14,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AB6429B1DEB40F70073E2D7"
-               BuildableName = "TouchHorse.app"
-               BlueprintName = "TouchHorse"
+               BlueprintIdentifier = "0AB642DF1DEB6F5D0073E2D7"
+               BuildableName = "TouchHorse Release.app"
+               BlueprintName = "TouchHorse Release"
+               ReferencedContainer = "container:TouchHorse.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0AB642AF1DEB40F70073E2D7"
+               BuildableName = "TouchHorseTests.xctest"
+               BlueprintName = "TouchHorseTests"
+               ReferencedContainer = "container:TouchHorse.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0AB642BA1DEB40F70073E2D7"
+               BuildableName = "TouchHorseUITests.xctest"
+               BlueprintName = "TouchHorseUITests"
                ReferencedContainer = "container:TouchHorse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +56,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AB642AF1DEB40F70073E2D7"
-               BuildableName = "TouchHorseTests.xctest"
-               BlueprintName = "TouchHorseTests"
-               ReferencedContainer = "container:TouchHorse.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AB642BA1DEB40F70073E2D7"
-               BuildableName = "TouchHorseUITests.xctest"
-               BlueprintName = "TouchHorseUITests"
-               ReferencedContainer = "container:TouchHorse.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0AB6429B1DEB40F70073E2D7"
-            BuildableName = "TouchHorse.app"
-            BlueprintName = "TouchHorse"
+            BlueprintIdentifier = "0AB642DF1DEB6F5D0073E2D7"
+            BuildableName = "TouchHorse Release.app"
+            BlueprintName = "TouchHorse Release"
             ReferencedContainer = "container:TouchHorse.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +83,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0AB6429B1DEB40F70073E2D7"
-            BuildableName = "TouchHorse.app"
-            BlueprintName = "TouchHorse"
+            BlueprintIdentifier = "0AB642DF1DEB6F5D0073E2D7"
+            BuildableName = "TouchHorse Release.app"
+            BlueprintName = "TouchHorse Release"
             ReferencedContainer = "container:TouchHorse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,16 +98,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0AB6429B1DEB40F70073E2D7"
-            BuildableName = "TouchHorse.app"
-            BlueprintName = "TouchHorse"
+            BlueprintIdentifier = "0AB642DF1DEB6F5D0073E2D7"
+            BuildableName = "TouchHorse Release.app"
+            BlueprintName = "TouchHorse Release"
             ReferencedContainer = "container:TouchHorse.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

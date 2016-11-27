@@ -10,9 +10,17 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var beginButton: UIButton!
+    @IBOutlet weak var logTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func tappedBegin(_ sender: Any) {
+        
+    }
+    
 
 }
 

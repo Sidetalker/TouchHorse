@@ -17,6 +17,16 @@
 		0AB642D21DEB44FA0073E2D7 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D11DEB44FA0073E2D7 /* TouchView.swift */; };
 		0AB642D41DEB47110073E2D7 /* ProStylin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D31DEB47110073E2D7 /* ProStylin.swift */; };
 		0AB642D61DEB479D0073E2D7 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D51DEB479D0073E2D7 /* UIHelpers.swift */; };
+		0AB642DC1DEB6E6E0073E2D7 /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB642DA1DEB6E470073E2D7 /* Telekinesis.framework */; };
+		0AB642DE1DEB6E6E0073E2D7 /* Telekinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB642DA1DEB6E470073E2D7 /* Telekinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AB642E11DEB6F5D0073E2D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642A11DEB40F70073E2D7 /* MainViewController.swift */; };
+		0AB642E21DEB6F5D0073E2D7 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D51DEB479D0073E2D7 /* UIHelpers.swift */; };
+		0AB642E31DEB6F5D0073E2D7 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D11DEB44FA0073E2D7 /* TouchView.swift */; };
+		0AB642E41DEB6F5D0073E2D7 /* ProStylin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB642D31DEB47110073E2D7 /* ProStylin.swift */; };
+		0AB642E51DEB6F5D0073E2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */; };
+		0AB642E91DEB6F5D0073E2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A81DEB40F70073E2D7 /* LaunchScreen.storyboard */; };
+		0AB642EA1DEB6F5D0073E2D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A61DEB40F70073E2D7 /* Assets.xcassets */; };
+		0AB642EB1DEB6F5D0073E2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB642A31DEB40F70073E2D7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +46,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0AB642DD1DEB6E6E0073E2D7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0AB642DE1DEB6E6E0073E2D7 /* Telekinesis.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0AB6429C1DEB40F70073E2D7 /* TouchHorse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchHorse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB6429C1DEB40F70073E2D7 /* TouchHorse Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TouchHorse Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB6429F1DEB40F70073E2D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AB642A11DEB40F70073E2D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0AB642A41DEB40F70073E2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +77,9 @@
 		0AB642D11DEB44FA0073E2D7 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
 		0AB642D31DEB47110073E2D7 /* ProStylin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProStylin.swift; sourceTree = "<group>"; };
 		0AB642D51DEB479D0073E2D7 /* UIHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		0AB642DA1DEB6E470073E2D7 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Telekinesis.framework; path = Frameworks/Telekinesis.framework; sourceTree = "<group>"; };
+		0AB642F21DEB6F5D0073E2D7 /* TouchHorse Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TouchHorse Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB642F31DEB6F5D0073E2D7 /* TouchHorse copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TouchHorse copy-Info.plist"; path = "/Users/kevin/Documents/github/TouchHorse/TouchHorse copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB642DC1DEB6E6E0073E2D7 /* Telekinesis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AB642E61DEB6F5D0073E2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,15 +122,18 @@
 				0AB642B31DEB40F70073E2D7 /* TouchHorseTests */,
 				0AB642BE1DEB40F70073E2D7 /* TouchHorseUITests */,
 				0AB6429D1DEB40F70073E2D7 /* Products */,
+				0AB642D71DEB6DF70073E2D7 /* Frameworks */,
+				0AB642F31DEB6F5D0073E2D7 /* TouchHorse copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		0AB6429D1DEB40F70073E2D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AB6429C1DEB40F70073E2D7 /* TouchHorse.app */,
+				0AB6429C1DEB40F70073E2D7 /* TouchHorse Dev.app */,
 				0AB642B01DEB40F70073E2D7 /* TouchHorseTests.xctest */,
 				0AB642BB1DEB40F70073E2D7 /* TouchHorseUITests.xctest */,
+				0AB642F21DEB6F5D0073E2D7 /* TouchHorse Release.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,25 +196,34 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		0AB642D71DEB6DF70073E2D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB642DA1DEB6E470073E2D7 /* Telekinesis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AB6429B1DEB40F70073E2D7 /* TouchHorse */ = {
+		0AB6429B1DEB40F70073E2D7 /* TouchHorse Dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AB642C41DEB40F70073E2D7 /* Build configuration list for PBXNativeTarget "TouchHorse" */;
+			buildConfigurationList = 0AB642C41DEB40F70073E2D7 /* Build configuration list for PBXNativeTarget "TouchHorse Dev" */;
 			buildPhases = (
 				0AB642981DEB40F70073E2D7 /* Sources */,
 				0AB642991DEB40F70073E2D7 /* Frameworks */,
 				0AB6429A1DEB40F70073E2D7 /* Resources */,
 				0AB642CD1DEB41830073E2D7 /* Auto-Increment Build # */,
+				0AB642DD1DEB6E6E0073E2D7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TouchHorse;
+			name = "TouchHorse Dev";
 			productName = TouchHorse;
-			productReference = 0AB6429C1DEB40F70073E2D7 /* TouchHorse.app */;
+			productReference = 0AB6429C1DEB40F70073E2D7 /* TouchHorse Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0AB642AF1DEB40F70073E2D7 /* TouchHorseTests */ = {
@@ -215,6 +262,24 @@
 			productReference = 0AB642BB1DEB40F70073E2D7 /* TouchHorseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0AB642DF1DEB6F5D0073E2D7 /* TouchHorse Release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AB642EF1DEB6F5D0073E2D7 /* Build configuration list for PBXNativeTarget "TouchHorse Release" */;
+			buildPhases = (
+				0AB642E01DEB6F5D0073E2D7 /* Sources */,
+				0AB642E61DEB6F5D0073E2D7 /* Frameworks */,
+				0AB642E81DEB6F5D0073E2D7 /* Resources */,
+				0AB642EC1DEB6F5D0073E2D7 /* Auto-Increment Build # */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TouchHorse Release";
+			productName = TouchHorse;
+			productReference = 0AB642F21DEB6F5D0073E2D7 /* TouchHorse Release.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,6 +307,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0AB6429B1DEB40F70073E2D7;
 					};
+					0AB642DF1DEB6F5D0073E2D7 = {
+						DevelopmentTeam = S7BT87895F;
+					};
 				};
 			};
 			buildConfigurationList = 0AB642971DEB40F70073E2D7 /* Build configuration list for PBXProject "TouchHorse" */;
@@ -257,7 +325,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AB6429B1DEB40F70073E2D7 /* TouchHorse */,
+				0AB6429B1DEB40F70073E2D7 /* TouchHorse Dev */,
+				0AB642DF1DEB6F5D0073E2D7 /* TouchHorse Release */,
 				0AB642AF1DEB40F70073E2D7 /* TouchHorseTests */,
 				0AB642BA1DEB40F70073E2D7 /* TouchHorseUITests */,
 			);
@@ -289,10 +358,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AB642E81DEB6F5D0073E2D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB642E91DEB6F5D0073E2D7 /* LaunchScreen.storyboard in Resources */,
+				0AB642EA1DEB6F5D0073E2D7 /* Assets.xcassets in Resources */,
+				0AB642EB1DEB6F5D0073E2D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		0AB642CD1DEB41830073E2D7 /* Auto-Increment Build # */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Auto-Increment Build #";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "versionNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\")\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+		0AB642EC1DEB6F5D0073E2D7 /* Auto-Increment Build # */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,17 +430,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AB642E01DEB6F5D0073E2D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB642E11DEB6F5D0073E2D7 /* MainViewController.swift in Sources */,
+				0AB642E21DEB6F5D0073E2D7 /* UIHelpers.swift in Sources */,
+				0AB642E31DEB6F5D0073E2D7 /* TouchView.swift in Sources */,
+				0AB642E41DEB6F5D0073E2D7 /* ProStylin.swift in Sources */,
+				0AB642E51DEB6F5D0073E2D7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		0AB642B21DEB40F70073E2D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AB6429B1DEB40F70073E2D7 /* TouchHorse */;
+			target = 0AB6429B1DEB40F70073E2D7 /* TouchHorse Dev */;
 			targetProxy = 0AB642B11DEB40F70073E2D7 /* PBXContainerItemProxy */;
 		};
 		0AB642BD1DEB40F70073E2D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AB6429B1DEB40F70073E2D7 /* TouchHorse */;
+			target = 0AB6429B1DEB40F70073E2D7 /* TouchHorse Dev */;
 			targetProxy = 0AB642BC1DEB40F70073E2D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -470,6 +575,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S7BT87895F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = TouchHorse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sideapps.TouchHorse;
@@ -483,6 +592,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S7BT87895F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = TouchHorse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sideapps.TouchHorse;
@@ -549,6 +662,40 @@
 			};
 			name = Release;
 		};
+		0AB642F01DEB6F5D0073E2D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S7BT87895F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "TouchHorse copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sideapps.TouchHorse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0AB642F11DEB6F5D0073E2D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S7BT87895F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "TouchHorse copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sideapps.TouchHorse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -561,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AB642C41DEB40F70073E2D7 /* Build configuration list for PBXNativeTarget "TouchHorse" */ = {
+		0AB642C41DEB40F70073E2D7 /* Build configuration list for PBXNativeTarget "TouchHorse Dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AB642C51DEB40F70073E2D7 /* Debug */,
@@ -584,6 +731,15 @@
 				0AB642CC1DEB40F70073E2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+		};
+		0AB642EF1DEB6F5D0073E2D7 /* Build configuration list for PBXNativeTarget "TouchHorse Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB642F01DEB6F5D0073E2D7 /* Debug */,
+				0AB642F11DEB6F5D0073E2D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

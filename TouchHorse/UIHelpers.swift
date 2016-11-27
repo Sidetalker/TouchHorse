@@ -17,29 +17,31 @@ class Circle: UIView {
     
     func setup() {
         backgroundColor = .clear
+        isUserInteractionEnabled = false
+        layer.contentsScale = UIScreen.main.scale
         layer.setNeedsDisplay()
     }
     
-    func scale(to scale: CGFloat, fades doesFade: Bool, completion: @escaping () -> Void) {
+    func scale(to scale: CGFloat, fades doesFade: Bool, completion: (() -> Void)? = nil) {
         let duration = 1.0
         let timing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         
         CATransaction.begin()
         CATransaction.setAnimationDuration(duration)
         CATransaction.setAnimationTimingFunction(timing)
-        (layer as? CircleAnimationLayer)?.scale = 1
+        (layer as? CircleAnimationLayer)?.scale = scale
         CATransaction.commit()
         
         UIView.animate(withDuration: 0.5, delay: 0.5, options: [], animations: {
-            self.alpha = 0
-        }, completion: { _ in completion() })
+            self.alpha = doesFade ? 0 : 1
+        }, completion: { _ in completion?() })
     }
     
     override func draw(_ layer: CALayer, in ctx: CGContext) {
         guard let animationLayer = layer as? CircleAnimationLayer else { return }
         
         UIGraphicsPushContext(ctx)
-        ProStylin.drawCircle(frame: bounds, resizing: .center, circleScale: animationLayer.scale)
+        ProStylin.drawCircle(circleScale: animationLayer.scale)
         UIGraphicsPopContext()
     }
     
