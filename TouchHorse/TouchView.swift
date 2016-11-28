@@ -29,7 +29,7 @@ struct TouchMetadata {
 }
 
 protocol TouchViewDelegate {
-    func registeredTouch(with metadata: TouchMetadata)
+    func registeredTap(with metadata: TouchMetadata)
 }
 
 class TouchView: UIView {
@@ -100,7 +100,7 @@ class TouchView: UIView {
     func stopTracking(touch: UITouch) {
         guard let data = touchData[touch] else { return }
         
-        delegate?.registeredTouch(with: data)
+        delegate?.registeredTap(with: data)
         data.circle.scale(to: 1, fades: true) { data.circle.removeFromSuperview() }
         touchData.removeValue(forKey: touch)
     }

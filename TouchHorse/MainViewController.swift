@@ -21,7 +21,7 @@ class MainViewController: UIViewController, TouchViewDelegate {
     }()
     
     var startTime = Date()
-    var touches = [TouchMetadata]()
+    var taps = [TapData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +34,16 @@ class MainViewController: UIViewController, TouchViewDelegate {
         
         if button.currentTitle == "BEGIN" {
             startTime = Date()
-            touches.removeAll()
+            taps.removeAll()
             button.setTitle("END", for: .normal)
             button.backgroundColor = .red
         } else {
             let currentText = logTextView.text ?? ""
-            logTextView.text = "Logged \(touches.count) touches\n\n\(currentText)"
+            logTextView.text = "Logged \(taps.count) touches\n\n\(currentText)"
             button.setTitle("BEGIN", for: .normal)
             button.backgroundColor = .green
             
-            TouchSet.create(with: touches, named: "Ballah Set", started: startTime)
+            TouchSet.create(with: taps, named: "Ballah Set", started: startTime)
             .then { touchSet -> Void in
                 log.debug("TouchSet created!")
                 self.logToScreen(text: "Log saved to Firebase")
@@ -54,14 +54,18 @@ class MainViewController: UIViewController, TouchViewDelegate {
         }
     }
     
-    func registeredTouch(with metadata: TouchMetadata) {
-        let startTime = debugTimeFormatter.string(from: metadata.startTime)
-        let duration = Int(Date().timeIntervalSince(metadata.startTime) * 1000)
+    func registeredTap(with metadata: TouchMetadata) {
+        let prettyStartTime = debugTimeFormatter.string(from: metadata.startTime)
+        let duration = Date().timeIntervalSince(metadata.startTime)
         let location = metadata.startLocation
         
-        logToScreen(text: "start: \(startTime)\nduration: \(duration)ms\nlocation: \(location)\n")
+        logToScreen(text: "start: \(prettyStartTime)\nduration: \(duration)\nlocation: \(location)\n")
         
-        touches.append(TouchMetadata(metadata: metadata, duration: duration))
+        let offsetStartTime = Date().timeIntervalSince1970 - startTime.timeIntervalSince1970
+        let frameSize = touchView.frame.size
+        let tap = TapData(duration: duration, startTime: offsetStartTime, location: location, frameSize: frameSize)
+        
+        taps.append(tap)
     }
     
     func logToScreen(text: String) {

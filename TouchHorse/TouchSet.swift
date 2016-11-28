@@ -12,16 +12,69 @@ enum TouchSetType: String {
     case taps = "taps"
 }
 
-class TouchSet {
+struct TapData {
     
-    var type: TouchSetType?
-    var taps: [TouchMetadata]?
+    var duration: Double
+    var startTime: Double
+    var xLocation: CGFloat
+    var yLocation: CGFloat
     
-    init(key: String, dictionary: [String : Any]) {
-        
+    var dictionary: [String : Any] {
+        return [
+            "duration" : duration,
+            "startTime" : startTime,
+            "xLocation" : xLocation,
+            "yLocation" : yLocation
+        ]
     }
     
-    class func create(with taps: [TouchMetadata], named name: String, started start: Date) -> Promise<TouchSet> {
+    init?(dictionary dict: [String : Any]) {
+        guard
+            let duration = dict["duration"] as? Double,
+            let startTime = dict["startTime"] as? Double,
+            let xLocation = dict["xLocation"] as? CGFloat,
+            let yLocation = dict["yLocation"] as? CGFloat
+        else { return nil }
+        
+        self.duration = duration
+        self.startTime = startTime
+        self.xLocation = xLocation
+        self.yLocation = yLocation
+    }
+    
+    init(duration: Double, startTime: Double, location: CGPoint, frameSize: CGSize) {
+        self.duration = duration
+        self.startTime = startTime
+        self.xLocation = location.x / frameSize.width
+        self.yLocation = location.y / frameSize.height
+    }
+    
+}
+
+class TouchSet {
+    
+    var key: String
+    var type: TouchSetType
+    
+    var name: String?
+    var startTime: Double?
+    var taps: [TapData]?
+    
+    init(key: String, type: TouchSetType, data: [String : Any]) {
+        self.key = key
+        self.type = type
+        
+        if let tapDicts = data["taps"] as? [[String : Any]] {
+            self.taps = [TapData]()
+            
+            for tapDict in tapDicts {
+                guard let tapData = TapData(dictionary: tapDict) else { continue }
+                self.taps?.append(tapData)
+            }
+        }
+    }
+    
+    class func create(with taps: [TapData], named name: String, started start: Date) -> Promise<TouchSet> {
         let ref = FIRDatabase.database().reference()
         
         var data: [String : Any] = [
@@ -32,22 +85,13 @@ class TouchSet {
         var tapArray = [[String : Any]]()
         
         for tap in taps {
-            guard let duration = tap.duration else { continue }
-            
-            let tapData: [String : Any] = [
-                "duration" : duration,
-                "startTime" : tap.startTime.timeIntervalSince1970,
-                "xLocation" : tap.startLocation.x,
-                "yLocation" : tap.startLocation.y
-            ]
-            
-            tapArray.append(tapData)
+            tapArray.append(tap.dictionary)
         }
         
         data["taps"] = tapArray
         
         return ref.child("touchSet").childByAutoId().set(data: data).then { ref in
-            return TouchSet(key: ref.key, dictionary: data)
+            return TouchSet(key: ref.key, type: .taps, data: data)
         }
     }
     
